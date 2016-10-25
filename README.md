@@ -25,3 +25,7 @@ The PCB is maintained for a process throughout its lifetime, and is deleted once
  * returns control to app. program 
 
 <img width="60%" src="https://cloud.githubusercontent.com/assets/1194257/19575845/db46afbc-9710-11e6-9395-694fc671becb.png">
+
+### System resource
+
+In computing, a resource is any physical or software component used by the processes in a limited amount of space or time inside a computer system. 
