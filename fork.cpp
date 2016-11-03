@@ -14,7 +14,7 @@ int counter = 0;
 
 int main() {
 
-    int pid = fork();
+    pid_t pid = fork();
     std::string processName;
 
     if (pid == 0) {
@@ -23,19 +23,15 @@ int main() {
         for (int i = 0; i < 50; ++i) {
             std::cout << processName << "counter " << ++counter << std::endl;
         }
-    } else if (pid > 0) {
+    } else {
         // parent process
         processName = "\033[1;34mParent process: \033[0m "; //
         for (int i = 0; i < 50; ++i)
         {
             std::cout << processName << "counter " << ++counter << std::endl;
         }
-    } else {
-        // fork failed
-        std::cout << "fork() failed!" << std::endl;
+    } 
 
-        return 1;
-    }
     std::cout << processName << "TERMINATED" << std::endl;
 
     return 0;
