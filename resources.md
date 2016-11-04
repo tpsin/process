@@ -26,23 +26,16 @@ All resources and processes are vertices in the graph.
 Allocations and requests are edges.
 
 
- Allocated          Process that    
- resource         has the resource    
-      _                _    
-     |_|------------->(_)
+    Allocated      Process that    
+     resource     has the resource                       
+        []------------->()
 
+    Waiting        Resource the    
+    process      process waits for                 
+       ()-------------->[]
 
-
- Waiting             Resource the    
- process            process waits for    
-      _                    _
-     (_)------------->|_|
-
-
-
-Waiting             Process that    
-process            should send message    
-      _                    _
-     (_)------------->(_)
+    Waiting        Process that    
+    process      should send message                           
+       ()-------------->()
 
 
