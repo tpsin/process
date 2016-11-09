@@ -38,4 +38,19 @@ Allocations and requests are edges.
     process      should send message                           
        ()-------------->()
 
+### Deadlock
+
+Sometimes, a waiting process is never again able to change state,
+because the resources it has requested are held by other waiting processes. 
+This situation is called a deadlock. 
+
+A deadlock situation can arise if the following condition occurs:
+
+* Circular wait. A set { P0 , P1 , ..., Pn } of waiting processes must exist such that P0 is waiting for a resource held by P1, P1 is waiting for a resource held by P2, ..., Pn−1 is waiting for a resource held by Pn, and Pn is waiting for a resource held by P0.
+
+Resource-allocation graph with a deadlock.
+
+
+
+
 
