@@ -50,7 +50,7 @@ A deadlock situation can arise if the following condition occurs:
 
 Resource-allocation graph with a deadlock.
 
-
+![Resource-allocation graph with a deadlock](https://cloud.githubusercontent.com/assets/1194257/20148499/49b722a0-a6ad-11e6-91ce-0035c44aaff8.png)
 
 
 
