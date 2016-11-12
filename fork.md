@@ -1,3 +1,9 @@
+### Prerequisite
+
+In order to follow this exercise, you need a **Unix based operating system**. 
+
+Otherwise, click the following link [tutorialspoint](http://www.tutorialspoint.com/codingground.htm) and then click "Bash Shell".
+
 ### Fork
 
 1. Open your terminal and run this command:
