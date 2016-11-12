@@ -4,7 +4,7 @@
 
         man fork
      
-2. By using **fork()**,  write a program that is able to print the following data:
+2. By using the **fork()** system call,  write a program that is able to print the following data:
 
         I am the parent <parent_pid>, my child is <child_pid>
         I am the clild <child_pid>, my parent is <parent_id>
@@ -13,6 +13,8 @@
 
         sleep 5 &
         jobs -l
+        
+4. By using the **sleep()** system call, create a "zombie" processes. You can display a zombie process by running `ps -a`.
         
 ### Solutions
 
@@ -46,3 +48,5 @@
         sleep 5 &
         
     "sleep 5" is a child process of the terminal process. If you kill the parent process also the child process will be killed.
+    
+4. If a parent does not wait for a child process to die, certain "zombie" processes will be left on the system.
