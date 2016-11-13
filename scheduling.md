@@ -14,6 +14,12 @@
 |   P2	|   5	|   18	|  23 	|
 |   P3	|   7	|   23	|  30 	|
 
-### FCFS java algorithm
+### FCFS algorithm
 
-COMPILE AND EXECUTE JAVA-8 ONLINE at the following url: https://www.tutorialspoint.com/compile_java8_online.php 
+1. [FCFS java algorithm](src/java/FCFS.java)
+
+2. [FCFS c++ algorithm](src/cpp/FCFS.cpp)
+
+### Prerequisite
+
+You can compile and execute JAVA-8 online at the following url: https://www.tutorialspoint.com/compile_java8_online.php 
