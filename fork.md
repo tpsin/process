@@ -22,7 +22,7 @@ Otherwise, click the following link [tutorialspoint](http://www.tutorialspoint.c
         
 4. By using the **sleep()** system call, create a "zombie" processes. You can display a zombie process by running `ps -a`.
         
-### Solutions
+### Fork Solutions
 
 1. Pay attention to the section **return values**.
 
@@ -35,17 +35,17 @@ Otherwise, click the following link [tutorialspoint](http://www.tutorialspoint.c
 
         #include <iostream>
         #include <unistd.h>
-        
+
         int main () {
-          
+
           pid_t childPidOrZero = fork();
-          
+
           if (childPidOrZero == 0) {
             std::cout << "I am the child " << getpid() << ", my parent is " << getppid() << std::endl;
           } else {
             std::cout << "I am the parent " << getpid() << ", my child is " << childPidOrZero << std::endl;
           }
-          
+
           return 0;
         }
         
@@ -56,3 +56,54 @@ Otherwise, click the following link [tutorialspoint](http://www.tutorialspoint.c
     "sleep 5" is a child process of the terminal process. If you kill the parent process also the child process will be killed.
     
 4. If a parent does not wait for a child process to die, certain "zombie" processes will be left on the system.
+
+### Fork exercises
+
+#### Exercise 1
+How many processes are created with the following code?
+
+        #include <iostream>
+        #include <unistd.h>
+        #include <stdlib.h>
+
+        int main () {
+            for (int i = 0; i < 2; i++){
+                if (fork() == 0) {
+                    std::cout << "Child PID is: " << getpid() << "\tParent PID is: " << getppid() << std::endl;
+                }
+                else {
+                    wait(NULL);
+                    std::cout << "Panrent PID is: " << getpid() << std::endl;
+                }
+            }
+            return 0;
+        }
+        
+#### Exercise 2
+How many processes are created if you run the following code?
+
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <unistd.h>
+
+    int main(void)
+    {
+            pid_t pid = fork();
+            pid = fork();
+            pid = fork();
+            if (pid == 0)
+            {
+            fork();
+            }
+            fork();
+            return 0;
+    }
+
+#### Solution 1
+
+        g++ fork.cpp ; ./a.out  |awk '{print $4}'|sort|uniq|wc
+        
+#### Solution 2
+
+fork() may also fail returning -1, so you might probably state that there are 'no more' than 24 processes, not 'exactly' 24.
+        
