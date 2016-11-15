@@ -98,6 +98,28 @@ How many processes are created if you run the following code?
             fork();
             return 0;
     }
+    
+#### Exercise 3
+
+If you compile and run the following program 
+
+        #include <iostream>
+        #include <unistd.h>
+
+        int main () {
+
+          pid_t childPidOrZero = fork();
+
+          if (childPidOrZero == 0) {
+            std::cout << "I am the child " << getpid() << ", my parent is " << getppid() << std::endl;
+          } else {
+            std::cout << "I am the parent " << getpid() << ", my child is " << childPidOrZero << std::endl;
+          }
+
+          return 0;
+        }
+
+Some times, the child process says my parent process has id 1. Why?
 
 #### Solution 1
 
@@ -106,4 +128,11 @@ How many processes are created if you run the following code?
 #### Solution 2
 
 fork() may also fail returning -1, so you might probably state that there are 'no more' than 24 processes, not 'exactly' 24.
+
+#### Solution 3
+
+Process ID 1 is usually the init process primarily responsible for starting and shutting down the system.  
+The init (short for initialization) is a daemon process that is the ancestor of all other processes.
+What's happening is that the parent is terminating before the child runs. This leaves the child as an orphan and it gets adopted by the root process with PID of 1. 
+If you put a delay you will see the result you expect.
         
