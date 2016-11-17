@@ -9,10 +9,9 @@ P3                |_______ C _____ A ______ Exit
 
 */
 
-#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
-#include <sys/wait.h>
-#include <string>
 
 int main () {
 
