@@ -2,10 +2,9 @@
 Try to find out what are the possible outputs of the following program.
 */
 
-#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
-#include <sys/wait.h>
-#include <string>
 
 int main () {
 
