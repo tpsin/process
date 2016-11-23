@@ -30,7 +30,7 @@ int main () {
         }
     }
 
-	wait(NULL);
+    wait(NULL);
     printf("A");
 
     return 0;
