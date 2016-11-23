@@ -29,3 +29,10 @@ The PCB is maintained for a process throughout its lifetime, and is deleted once
 ### System resource
 
 In computing, a resource is any physical or software component used by the processes in a limited amount of space or time inside a computer system. 
+
+### System Call
+
+System calls are like special functions that manage OS routines which live in **Kernel Mode**.  
+System calls are almost the only interface used by **User Mode** to talk with low level resources (hardware). 
+
+![System-call](https://sketch.io/render/sk-5761568e0e73dee33546c79ff4c8d5b3.jpeg)
