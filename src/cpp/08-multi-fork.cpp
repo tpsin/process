@@ -2,10 +2,10 @@
 Try to find out what are the possible outputs of the following program.
 ____*(20)_____*(28)_________WAIT______A______EXIT
     |         |
-    |         |_____E__WAIT___A____EXIT
+    |         |_____E___WAIT___A____EXIT
     |
     |
-    |_*(21)____B__WAIT__A____EXIT
+    |_*(21)____B___WAIT___A____EXIT
       |
       |____C_____EXIT
 
