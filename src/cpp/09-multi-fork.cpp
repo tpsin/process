@@ -15,12 +15,12 @@ ____*(18)_____*(19)_________C_____WAIT______A______EXIT
 
 int main () {
 
-    if (fork() > 0) {
-        if(fork() == 0) {
-            printf("B");
-            exit(0);
+	if (fork() > 0) {
+		if(fork() == 0) {
+			printf("B");
+			exit(0);
         } else {
-            printf("C");
+			printf("C");
 			wait(NULL);
         }
     } else {
@@ -29,7 +29,7 @@ int main () {
 		}
     }
 
-    printf("A");
+	printf("A");
 
-    return 0;
+	return 0;
 }
