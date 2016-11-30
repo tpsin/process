@@ -1,6 +1,6 @@
 /**
 Try to find out what are the possible outputs of the following program.
-____*(18)_____*(19)_________WAIT______A______EXIT
+____*(18)_____*(19)_________C_____WAIT______A______EXIT
     |         |
     |         |_____B____EXIT
     |
