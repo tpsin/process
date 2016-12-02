@@ -20,19 +20,15 @@ CABRA
 
 int main () {
 
-    if (1 && fork() > 0) {
-        if(fork() == 0 || 0) {
-            printf("B");
-		  exit(0);
+    if (fork() == 0 && fork() > 0) {
+        if(fork() == 0 || fork() > 0) {
+            printf("A");
         } else {
-		  printf("C");
+            printf("B");
         }
+    } else {
+        printf("C");
     }
-    else {
-	   printf("R");
-    }
-
-    printf("A");
 
     return 0;
 }
