@@ -6,6 +6,12 @@ class MyThread extends Thread {
 		for(int c = 0; c < 10; c++) {
 			System.out.println(Thread.currentThread().getId() + " Value " + c);
 		}
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }
