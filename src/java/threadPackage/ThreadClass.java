@@ -4,7 +4,7 @@ class MyThread extends Thread {
 
 	public void run() {
 		for(int c = 0; c < 10; c++) {
-			System.out.println("Value " + c);
+			System.out.println(Thread.currentThread().getId() + " Value " + c);
 		}
 	}
 
@@ -16,6 +16,9 @@ public class ThreadClass {
 
 		MyThread myThread = new MyThread();
 		myThread.start();
+
+		MyThread myThread2 = new MyThread();
+		myThread2.start();
 
 	}
 
